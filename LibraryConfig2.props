@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ThoCao\Install 2.0.0\64bit\opencv\include;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;C:\Users\thoca\Desktop\Tube Project Stage 2\Source Code\TubeProject\TubeProjectStage2\Include;C:\Qt\Qt5.6.2\5.6\msvc2015_64\include\QtConcurrent;C:\Qt\Qt5.6.2\5.6\msvc2015_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\ThoCao\Install 2.0.0\64bit\opencv\x64\vc14\lib;C:\Users\thoca\Desktop\Tube Project Stage 2\Source Code\TubeProject\TubeProjectStage2\lib\PointGrey;C:\Users\thoca\Desktop\Tube Project Stage 2\Source Code\TubeProject\TubeProjectStage2\lib\BaslerCam;C:\Qt\Qt5.6.2\5.6\msvc2015_64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world330d.lib;opencv_world330.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;FlyCapture2_Cd_v140.lib;FlyCapture2d_v140.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y  "C:\ThoCao\Install 2.0.0\64bit\opencv\x64\vc14\bin\opencv_world330d.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
+xcopy /y  "C:\Qt\Qt5.6.2\5.6\msvc2015_64\bin\Qt5Guid.dll"  "$(SolutionDir)$(Platform)\$(Configuration)\"
+xcopy /y  "C:\Qt\Qt5.6.2\5.6\msvc2015_64\bin\Qt5Cored.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
+xcopy /y  "C:\Qt\Qt5.6.2\5.6\msvc2015_64\bin\Qt5Widgetsd.dll"  "$(SolutionDir)$(Platform)\$(Configuration)\"
+xcopy /y  "C:\Users\thoca\Desktop\Tube Project Stage 2\Source Code\TubeProject\TubeProjectStage2\bin\FlyCapture2_Cd_v140.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
+xcopy /y  "C:\Users\thoca\Desktop\Tube Project Stage 2\Source Code\TubeProject\TubeProjectStage2\bin\FlyCapture2d_v140.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
+
+
+xcopy /y  "C:\ThoCao\Install 2.0.0\64bit\opencv\x64\vc14\bin\opencv_world330.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
+xcopy /y  "C:\Qt\Qt5.6.2\5.6\msvc2015_64\bin\Qt5Gui.dll"  "$(SolutionDir)$(Platform)\$(Configuration)\"
+xcopy /y  "C:\Qt\Qt5.6.2\5.6\msvc2015_64\bin\Qt5Core.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
+xcopy /y  "C:\Qt\Qt5.6.2\5.6\msvc2015_64\bin\Qt5Widgets.dll"  "$(SolutionDir)$(Platform)\$(Configuration)\"
+xcopy /y  "C:\Users\thoca\Desktop\Tube Project Stage 2\Source Code\TubeProject\TubeProjectStage2\bin\FlyCapture2_C_v140.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
+xcopy /y  "C:\Users\thoca\Desktop\Tube Project Stage 2\Source Code\TubeProject\TubeProjectStage2\bin\FlyCapture2_v140.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
+
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
